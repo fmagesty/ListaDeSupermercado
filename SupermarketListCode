@@ -1,0 +1,25 @@
+itemsDict = {}
+
+while True:
+# Welcome message:
+    print('Digite os items que quer adicionar a sua lista. Deixe em branco para parar: ')
+# Adding the item:
+    item = str(input())
+    if item == '':
+        break
+# Adding the item quantity:
+    print(f'Qual a quantidade de {item}?')
+    quant = input()
+    itemsDict[item] = quant
+
+
+def printLista():
+    print('Sua lista contem os seguinte items: ')
+# Orders the dict alphabetically and prints each item + value side by side:
+    for i in sorted(itemsDict):
+        print(itemsDict[i] + '.'.center(5, '.') + i.title())
+
+
+print('____________________________________________________________________________________________________\n____________________________________________________________________________________________________\n____________________________________________________________________________________________________')
+# Print the final list
+printLista() 
