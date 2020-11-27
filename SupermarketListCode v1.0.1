@@ -9,7 +9,7 @@ while True:
         break
 # Adding the item quantity:
     print(f'Qual a quantidade de {item}?')
-    quant = input()
+    quant = int(input())
     itemsDict[item] = quant
 
 
@@ -17,7 +17,7 @@ def printLista():
     print('Sua lista contem os seguinte items: ')
 # Orders the dict alphabetically and prints each item + value side by side:
     for i in sorted(itemsDict):
-        print(itemsDict[i] + '.'.center(5, '.') + i.title())
+        print(str(itemsDict[i]).rjust(5) + '.'.center(5, '.') + i.title())
 
 
 print('____________________________________________________________________________________________________\n____________________________________________________________________________________________________\n____________________________________________________________________________________________________')
